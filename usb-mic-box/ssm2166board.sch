@@ -14793,34 +14793,37 @@ KS-S stereo microphone/headphone jack&lt;p&gt;
 <part name="P+2" library="supply1" deviceset="+5V" device=""/>
 <part name="R101" library="pot" deviceset="TRIM_EU-" device="CA6V" value="10k"/>
 <part name="C101" library="rcl" deviceset="C-EU" device="C1206" value="100nF"/>
-<part name="R1" library="pot" deviceset="TRIM_EU-" device="CA6V" value="10k"/>
 <part name="X1" library="con-hirschmann" deviceset="PG203J" device=""/>
+<part name="R1" library="pot" deviceset="TRIM_EU-" device="CA6V" value="10k"/>
 </parts>
 <sheets>
 <sheet>
 <plain>
+<text x="157.48" y="106.68" size="1.778" layer="91">Neg. Feedback Adj.</text>
+<text x="25.4" y="91.44" size="1.778" layer="91">Mic Z</text>
+<text x="-12.7" y="68.58" size="1.778" layer="91">Left In</text>
 </plain>
 <instances>
 <instance part="IC1" gate="G$1" x="55.88" y="88.9"/>
-<instance part="P+1" gate="1" x="10.16" y="139.7"/>
-<instance part="C103" gate="G$1" x="10.16" y="96.52"/>
-<instance part="SUPPLY1" gate="G$1" x="10.16" y="40.64"/>
-<instance part="C105" gate="G$1" x="99.06" y="55.88"/>
-<instance part="SUPPLY2" gate="G$1" x="99.06" y="40.64"/>
-<instance part="C107" gate="G$1" x="111.76" y="55.88"/>
-<instance part="C190" gate="G$1" x="22.86" y="60.96"/>
-<instance part="R104" gate="G$1" x="91.44" y="121.92" rot="R90"/>
-<instance part="R109" gate="G$1" x="129.54" y="73.66" rot="R90"/>
-<instance part="R108" gate="G$1" x="81.28" y="121.92" rot="R90"/>
+<instance part="P+1" gate="1" x="-2.54" y="139.7"/>
+<instance part="C103" gate="G$1" x="-2.54" y="86.36"/>
+<instance part="SUPPLY1" gate="G$1" x="-2.54" y="40.64"/>
+<instance part="C105" gate="G$1" x="119.38" y="55.88"/>
+<instance part="SUPPLY2" gate="G$1" x="119.38" y="40.64"/>
+<instance part="C107" gate="G$1" x="132.08" y="55.88"/>
+<instance part="C190" gate="G$1" x="20.32" y="60.96"/>
+<instance part="R104" gate="G$1" x="91.44" y="132.08" rot="R90"/>
+<instance part="R109" gate="G$1" x="104.14" y="63.5" rot="R90"/>
+<instance part="R108" gate="G$1" x="81.28" y="132.08" rot="R90"/>
 <instance part="C106" gate="G$1" x="116.84" y="101.6" rot="R90"/>
 <instance part="R181" gate="G$1" x="139.7" y="111.76"/>
 <instance part="JP1" gate="A" x="73.66" y="152.4" rot="R90"/>
 <instance part="JP2" gate="A" x="99.06" y="152.4" rot="R90"/>
 <instance part="P+2" gate="1" x="111.76" y="170.18"/>
 <instance part="R101" gate="1" x="152.4" y="111.76" rot="R180"/>
-<instance part="C101" gate="G$1" x="-7.62" y="96.52"/>
-<instance part="R1" gate="1" x="-7.62" y="109.22" rot="R270"/>
-<instance part="X1" gate="1" x="-48.26" y="58.42" rot="R180"/>
+<instance part="C101" gate="G$1" x="10.16" y="68.58" rot="R90"/>
+<instance part="X1" gate="1" x="-48.26" y="71.12" rot="R180"/>
+<instance part="R1" gate="1" x="20.32" y="93.98" rot="R180"/>
 </instances>
 <busses>
 </busses>
@@ -14828,15 +14831,16 @@ KS-S stereo microphone/headphone jack&lt;p&gt;
 <net name="+5V" class="0">
 <segment>
 <pinref part="P+1" gate="1" pin="+5V"/>
-<wire x1="10.16" y1="137.16" x2="10.16" y2="109.22" width="0.1524" layer="91"/>
+<wire x1="-2.54" y1="137.16" x2="-2.54" y2="104.14" width="0.1524" layer="91"/>
 <pinref part="IC1" gate="G$1" pin="V+"/>
 <pinref part="C103" gate="G$1" pin="1"/>
-<wire x1="10.16" y1="109.22" x2="10.16" y2="104.14" width="0.1524" layer="91"/>
+<wire x1="-2.54" y1="104.14" x2="10.16" y2="104.14" width="0.1524" layer="91"/>
 <wire x1="10.16" y1="104.14" x2="38.1" y2="104.14" width="0.1524" layer="91"/>
-<wire x1="10.16" y1="99.06" x2="10.16" y2="104.14" width="0.1524" layer="91"/>
-<pinref part="R1" gate="1" pin="E"/>
-<wire x1="-2.54" y1="109.22" x2="10.16" y2="109.22" width="0.1524" layer="91"/>
-<junction x="10.16" y="109.22"/>
+<wire x1="-2.54" y1="88.9" x2="-2.54" y2="104.14" width="0.1524" layer="91"/>
+<junction x="-2.54" y="104.14"/>
+<pinref part="R1" gate="1" pin="S"/>
+<wire x1="15.24" y1="93.98" x2="10.16" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="10.16" y1="93.98" x2="10.16" y2="104.14" width="0.1524" layer="91"/>
 <junction x="10.16" y="104.14"/>
 </segment>
 <segment>
@@ -14862,54 +14866,55 @@ KS-S stereo microphone/headphone jack&lt;p&gt;
 <segment>
 <pinref part="SUPPLY1" gate="G$1" pin="AGND"/>
 <pinref part="C103" gate="G$1" pin="2"/>
-<wire x1="10.16" y1="43.18" x2="10.16" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="-2.54" y1="43.18" x2="-2.54" y2="50.8" width="0.1524" layer="91"/>
 <pinref part="C190" gate="G$1" pin="2"/>
-<wire x1="10.16" y1="50.8" x2="10.16" y2="66.04" width="0.1524" layer="91"/>
-<wire x1="10.16" y1="66.04" x2="10.16" y2="91.44" width="0.1524" layer="91"/>
-<wire x1="22.86" y1="55.88" x2="22.86" y2="50.8" width="0.1524" layer="91"/>
-<wire x1="22.86" y1="50.8" x2="10.16" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="-2.54" y1="50.8" x2="-2.54" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="-2.54" y1="78.74" x2="-2.54" y2="81.28" width="0.1524" layer="91"/>
+<wire x1="20.32" y1="55.88" x2="20.32" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="20.32" y1="50.8" x2="-2.54" y2="50.8" width="0.1524" layer="91"/>
 <pinref part="IC1" gate="G$1" pin="POWER_DOWN"/>
 <wire x1="38.1" y1="76.2" x2="33.02" y2="76.2" width="0.1524" layer="91"/>
 <wire x1="33.02" y1="76.2" x2="33.02" y2="73.66" width="0.1524" layer="91"/>
 <wire x1="33.02" y1="73.66" x2="33.02" y2="50.8" width="0.1524" layer="91"/>
-<wire x1="33.02" y1="50.8" x2="22.86" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="33.02" y1="50.8" x2="20.32" y2="50.8" width="0.1524" layer="91"/>
 <pinref part="IC1" gate="G$1" pin="GND"/>
 <wire x1="38.1" y1="73.66" x2="33.02" y2="73.66" width="0.1524" layer="91"/>
 <junction x="33.02" y="73.66"/>
-<junction x="22.86" y="50.8"/>
-<junction x="10.16" y="50.8"/>
+<junction x="20.32" y="50.8"/>
+<junction x="-2.54" y="50.8"/>
 <pinref part="X1" gate="1" pin="1"/>
-<wire x1="-35.56" y1="66.04" x2="10.16" y2="66.04" width="0.1524" layer="91"/>
+<junction x="-2.54" y="78.74"/>
+<wire x1="-35.56" y1="78.74" x2="-2.54" y2="78.74" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="C105" gate="G$1" pin="2"/>
 <pinref part="SUPPLY2" gate="G$1" pin="AGND"/>
-<wire x1="99.06" y1="50.8" x2="99.06" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="119.38" y1="50.8" x2="119.38" y2="48.26" width="0.1524" layer="91"/>
 <pinref part="C107" gate="G$1" pin="-"/>
-<wire x1="99.06" y1="48.26" x2="99.06" y2="43.18" width="0.1524" layer="91"/>
-<wire x1="111.76" y1="50.8" x2="111.76" y2="48.26" width="0.1524" layer="91"/>
-<wire x1="111.76" y1="48.26" x2="99.06" y2="48.26" width="0.1524" layer="91"/>
-<junction x="99.06" y="48.26"/>
+<wire x1="119.38" y1="48.26" x2="119.38" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="132.08" y1="50.8" x2="132.08" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="132.08" y1="48.26" x2="119.38" y2="48.26" width="0.1524" layer="91"/>
+<junction x="119.38" y="48.26"/>
 </segment>
 </net>
 <net name="N$1" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="VCA_GAIN_ADJ"/>
 <pinref part="C105" gate="G$1" pin="1"/>
-<wire x1="76.2" y1="93.98" x2="99.06" y2="93.98" width="0.1524" layer="91"/>
-<wire x1="99.06" y1="93.98" x2="99.06" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="76.2" y1="93.98" x2="104.14" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="119.38" y1="93.98" x2="119.38" y2="58.42" width="0.1524" layer="91"/>
 <pinref part="R109" gate="G$1" pin="2"/>
-<wire x1="99.06" y1="93.98" x2="129.54" y2="93.98" width="0.1524" layer="91"/>
-<wire x1="129.54" y1="93.98" x2="129.54" y2="78.74" width="0.1524" layer="91"/>
-<junction x="99.06" y="93.98"/>
+<wire x1="119.38" y1="93.98" x2="104.14" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="104.14" y1="93.98" x2="104.14" y2="68.58" width="0.1524" layer="91"/>
+<junction x="104.14" y="93.98"/>
 </segment>
 </net>
 <net name="N$2" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="VCAR"/>
 <pinref part="C107" gate="G$1" pin="+"/>
-<wire x1="76.2" y1="96.52" x2="111.76" y2="96.52" width="0.1524" layer="91"/>
-<wire x1="111.76" y1="96.52" x2="111.76" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="76.2" y1="96.52" x2="132.08" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="132.08" y1="96.52" x2="132.08" y2="58.42" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$5" class="0">
@@ -14917,7 +14922,7 @@ KS-S stereo microphone/headphone jack&lt;p&gt;
 <pinref part="IC1" gate="G$1" pin="ROTATION_POINT_SET"/>
 <pinref part="R104" gate="G$1" pin="1"/>
 <wire x1="76.2" y1="81.28" x2="91.44" y2="81.28" width="0.1524" layer="91"/>
-<wire x1="91.44" y1="81.28" x2="91.44" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="91.44" y1="81.28" x2="91.44" y2="127" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$4" class="0">
@@ -14925,7 +14930,7 @@ KS-S stereo microphone/headphone jack&lt;p&gt;
 <pinref part="IC1" gate="G$1" pin="NOIS_GATE_SET"/>
 <pinref part="R108" gate="G$1" pin="1"/>
 <wire x1="76.2" y1="83.82" x2="81.28" y2="83.82" width="0.1524" layer="91"/>
-<wire x1="81.28" y1="83.82" x2="81.28" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="81.28" y1="83.82" x2="81.28" y2="127" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$6" class="0">
@@ -14949,37 +14954,23 @@ KS-S stereo microphone/headphone jack&lt;p&gt;
 <junction x="127" y="111.76"/>
 </segment>
 </net>
-<net name="N$8" class="0">
-<segment>
-<pinref part="R108" gate="G$1" pin="2"/>
-<wire x1="81.28" y1="127" x2="81.28" y2="129.54" width="0.1524" layer="91"/>
-<pinref part="JP1" gate="A" pin="2"/>
-<wire x1="81.28" y1="129.54" x2="73.66" y2="129.54" width="0.1524" layer="91"/>
-<wire x1="73.66" y1="129.54" x2="73.66" y2="142.24" width="0.1524" layer="91"/>
-<wire x1="73.66" y1="149.86" x2="73.66" y2="142.24" width="0.1524" layer="91"/>
-<pinref part="JP1" gate="A" pin="3"/>
-<wire x1="73.66" y1="142.24" x2="76.2" y2="142.24" width="0.1524" layer="91"/>
-<wire x1="76.2" y1="142.24" x2="76.2" y2="149.86" width="0.1524" layer="91"/>
-<junction x="73.66" y="142.24"/>
-</segment>
-</net>
 <net name="N$9" class="0">
 <segment>
 <pinref part="R104" gate="G$1" pin="2"/>
-<wire x1="91.44" y1="127" x2="91.44" y2="129.54" width="0.1524" layer="91"/>
+<wire x1="91.44" y1="137.16" x2="91.44" y2="142.24" width="0.1524" layer="91"/>
 <pinref part="JP2" gate="A" pin="1"/>
-<wire x1="91.44" y1="129.54" x2="96.52" y2="129.54" width="0.1524" layer="91"/>
-<wire x1="96.52" y1="129.54" x2="96.52" y2="149.86" width="0.1524" layer="91"/>
+<wire x1="91.44" y1="142.24" x2="96.52" y2="142.24" width="0.1524" layer="91"/>
+<wire x1="96.52" y1="142.24" x2="96.52" y2="149.86" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$10" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="-IN"/>
 <wire x1="38.1" y1="91.44" x2="33.02" y2="91.44" width="0.1524" layer="91"/>
-<wire x1="33.02" y1="91.44" x2="33.02" y2="132.08" width="0.1524" layer="91"/>
+<wire x1="33.02" y1="91.44" x2="33.02" y2="119.38" width="0.1524" layer="91"/>
 <pinref part="R101" gate="1" pin="A"/>
-<wire x1="33.02" y1="132.08" x2="152.4" y2="132.08" width="0.1524" layer="91"/>
-<wire x1="152.4" y1="132.08" x2="152.4" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="33.02" y1="119.38" x2="152.4" y2="119.38" width="0.1524" layer="91"/>
+<wire x1="152.4" y1="119.38" x2="152.4" y2="116.84" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$11" class="0">
@@ -14992,25 +14983,36 @@ KS-S stereo microphone/headphone jack&lt;p&gt;
 <net name="N$3" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="+IN"/>
-<wire x1="22.86" y1="86.36" x2="38.1" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="20.32" y1="68.58" x2="20.32" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="20.32" y1="86.36" x2="38.1" y2="86.36" width="0.1524" layer="91"/>
 <pinref part="C190" gate="G$1" pin="1"/>
-<wire x1="22.86" y1="63.5" x2="22.86" y2="86.36" width="0.1524" layer="91"/>
-<wire x1="22.86" y1="86.36" x2="-7.62" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="20.32" y1="63.5" x2="20.32" y2="68.58" width="0.1524" layer="91"/>
 <pinref part="C101" gate="G$1" pin="2"/>
-<wire x1="-7.62" y1="86.36" x2="-7.62" y2="91.44" width="0.1524" layer="91"/>
-<junction x="22.86" y="86.36"/>
+<wire x1="20.32" y1="68.58" x2="15.24" y2="68.58" width="0.1524" layer="91"/>
+<junction x="20.32" y="68.58"/>
+<pinref part="R1" gate="1" pin="E"/>
+<wire x1="20.32" y1="88.9" x2="20.32" y2="86.36" width="0.1524" layer="91"/>
+<junction x="20.32" y="86.36"/>
 </segment>
 </net>
 <net name="N$12" class="0">
 <segment>
 <pinref part="C101" gate="G$1" pin="1"/>
-<pinref part="R1" gate="1" pin="S"/>
-<wire x1="-7.62" y1="99.06" x2="-7.62" y2="101.6" width="0.1524" layer="91"/>
 <pinref part="X1" gate="1" pin="5"/>
-<wire x1="-7.62" y1="101.6" x2="-7.62" y2="104.14" width="0.1524" layer="91"/>
-<wire x1="-35.56" y1="55.88" x2="-15.24" y2="55.88" width="0.1524" layer="91"/>
-<wire x1="-15.24" y1="55.88" x2="-15.24" y2="101.6" width="0.1524" layer="91"/>
-<wire x1="-15.24" y1="101.6" x2="-7.62" y2="101.6" width="0.1524" layer="91"/>
+<wire x1="-35.56" y1="68.58" x2="7.62" y2="68.58" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$13" class="0">
+<segment>
+<pinref part="R108" gate="G$1" pin="2"/>
+<wire x1="81.28" y1="137.16" x2="81.28" y2="142.24" width="0.1524" layer="91"/>
+<pinref part="JP1" gate="A" pin="3"/>
+<wire x1="81.28" y1="142.24" x2="76.2" y2="142.24" width="0.1524" layer="91"/>
+<wire x1="76.2" y1="142.24" x2="76.2" y2="149.86" width="0.1524" layer="91"/>
+<wire x1="76.2" y1="142.24" x2="73.66" y2="142.24" width="0.1524" layer="91"/>
+<pinref part="JP1" gate="A" pin="2"/>
+<wire x1="73.66" y1="142.24" x2="73.66" y2="149.86" width="0.1524" layer="91"/>
+<junction x="76.2" y="142.24"/>
 </segment>
 </net>
 </nets>
